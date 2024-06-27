@@ -59,31 +59,92 @@ body{
 #containerDiv {
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: space-between;
     height: 300px;
     width: 180px;
     border: 1px solid white;
     border-radius: 15px;
+    padding: 10px;
+    gap: 8px;
     background-color: rgb(235, 173, 97);
 }
 
-#firstDiv, #secondDiv{
+#firstDiv{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 300px;
     margin: 10px;
     padding: 20px;
-    border: 1px solid blue; /* Solo para visualización */
     border-radius: 10px;
     position: absolute;
-   
 }
 
-#secondDiv{
 
+#h1{
+    font-size: 16px;
+    
 }
+#p{
+    font-size: 12px;
+}
+
 
 #botton {
-    color: black;
-    font-size: px;
-    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 100px;
+    color: rgb(207, 207, 169);
+    background-color: rgb(47, 43, 43);
+    border: #e64848;
+    font-size: 11px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 10px 10px;
+    cursor: pointer;
+
+}
+
+#productListContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;      
+    padding: 20px;
+    background-color: #f9f9f9; 
+}
+#productContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%; 
+    height: 250px;
+    border-radius: 10px;    
+    margin: 10px;
+    transition: .3s ease;
+    padding: 20px;
+    background-color: #fff; 
+   
+}
+#productContainer:hover{
+    background-color: rgb(230, 202, 192);
+}
+#img {
+    max-width: 100%;       
+    height: auto;          
+    border-radius: 10px;   
+}
+
+#name{
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, Helvetica, sans-serif;
+}
+
+#price{
+    font-size: 12px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
 }

@@ -32,20 +32,58 @@ const secondDiv = document.createElement("div");
 secondDiv.id ="secondDiv";
 containerDiv.appendChild(secondDiv);
 
-const name = document.createElement("p");
+const name = document.createElement("h1");
+name.id = "h1";
 name.textContent = `Nombre: ${fastFoof[0].productName}`;
 const price = document.createElement("p");
-price.textContent = `Precio: $${fastFoof[0].price.toFixed(2)}`;
+price.id= "p";
+price.textContent = `Precio: €${fastFoof[0].price.toFixed(2)}`;
 
-secondDiv.appendChild(name);
-secondDiv.appendChild(price);
+firstDiv.appendChild(name);
+firstDiv.appendChild(price);
 
 const botton = document.createElement("button");
 botton.id = "botton"
 botton.textContent = "Add"
 containerDiv.appendChild(botton)
+console.log(botton);
 
+const productListContainer = document.createElement("div");
+productListContainer.id = "productListContainer";
+document.body.appendChild(productListContainer);
 
+fastFoof.forEach(product => {
+    const productContainer= document.createElement("div");
+    productContainer.id= "productContainer";
+
+    const image = document.createElement('img');
+    image.id= "img";
+    image.src = product.img;
+    image.alt = product.productName;
+    image.style.width = '100px';
+    image.style.height = '100px';
+    image.style.borderRadius = '10px';
+    productContainer.appendChild(image);
+
+    const name = document.createElement('p');
+    name.id= "name";
+    name.textContent = `Nombre: ${product.productName}`;
+    productContainer.appendChild(name);
+
+    const price = document.createElement('p');
+    price.id = "price";
+    price.textContent = `Precio: ${product.price.toFixed(2)}€`;
+    productContainer.appendChild(price);
+
+    productListContainer.appendChild(productContainer);
+
+    const botton = document.createElement("button");
+    botton.id = "botton"
+    botton.textContent = "Add"
+    productContainer.appendChild(botton)
+     
+
+})
 
 
 
